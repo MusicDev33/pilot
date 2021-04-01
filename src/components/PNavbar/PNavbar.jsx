@@ -45,13 +45,13 @@ export default class PNavbar extends Component {
               <span className="current">Home</span>
             </Nav.Link>
             <Nav.Link href="#" className={'about' === this.props.active ? active : className}>
-              <span>About</span>
+              <span>Monitoring</span>
             </Nav.Link>
             <Nav.Link href="#" className={'dataset' === this.props.active ? active : className}>
-              <span>Data Set</span>
+              <span>Data</span>
             </Nav.Link>
             <Nav.Link href="#" className={'help' === this.props.active ? active : className}>
-              <span>Help</span>
+              <span>Security</span>
             </Nav.Link>
           </Nav>
 
