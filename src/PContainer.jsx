@@ -13,7 +13,7 @@ import {
 
 import env from 'react-dotenv';
 
-export class HContainer extends Component {
+export default class PContainer extends Component {
 
   constructor(props) {
     super(props);
@@ -36,9 +36,10 @@ export class HContainer extends Component {
     return (
       <Router>
         <Container fluid className="App px-0">
+          <Home />
           <Switch>
             <Route path={`${env.BASE_URL}/home`}>
-              <Home sendTissueData={this.getTissueData} />
+
             </Route>
           </Switch>
         </Container>

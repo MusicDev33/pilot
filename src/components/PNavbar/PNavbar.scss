@@ -1,0 +1,30 @@
+@import '~scss/colors';
+
+.nav-wrapper {
+  background: transparent;
+  width: 700px;
+}
+
+.nav-link span {
+
+  color: $palette-2-light!important;
+  font-weight: 600;
+  transition: 0.3s;
+  border-bottom: 3px solid transparent;
+
+  font-family: 'Work Sans', sans-serif;
+  font-size: 120%;
+
+  &.current {
+    color: $palette-2!important;
+  }
+
+  &:hover {
+    color: $palette-2-dark!important;
+    border-color: $palette-2-dark;
+  }
+}
+
+.navbar-brand {
+  color: $text-main!important;
+}

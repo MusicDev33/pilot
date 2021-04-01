@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import PNavbar from 'components/PNavbar/PNavbar';
+
 export default class Home extends Component {
   constructor() {
     super();
@@ -11,7 +13,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div></div>
+      <div>
+        <PNavbar />
+      </div>
     )
   }
 }
