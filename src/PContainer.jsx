@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Home from './pages/Home/Home';
+import PNavbar from 'components/PNavbar/PNavbar';
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import {
   BrowserRouter as Router,
@@ -36,12 +40,19 @@ export default class PContainer extends Component {
     return (
       <Router>
         <Container fluid className="App px-0">
-          <Home />
-          <Switch>
-            <Route path={`${env.BASE_URL}/home`}>
+          <Row>
+            <Col sm={2}>
+              <PNavbar />
+            </Col>
+            <Col>
+              <Home />
+              <Switch>
+                <Route path={`${env.BASE_URL}/home`}>
 
-            </Route>
-          </Switch>
+                </Route>
+              </Switch>
+            </Col>
+          </Row>
         </Container>
       </Router>);
   }

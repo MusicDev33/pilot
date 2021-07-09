@@ -8,6 +8,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import { IconContext } from 'react-icons';
+import { FaHome, FaServer, FaDatabase, FaShieldAlt } from 'react-icons/fa';
+
 import './PNavbar.scss';
 
 export default class PNavbar extends Component {
@@ -34,29 +37,49 @@ export default class PNavbar extends Component {
     let active = 'mx-1 current';
 
     return (
-      <div className="mx-5 mb-4 mt-3 nav-wrapper mx-auto">
-        <Navbar>
-          <Navbar.Brand className="h-brand">
-            <b>Pilot</b>
-          </Navbar.Brand>
+      <Container fluid className="px-4 p-navbar">
+        <Row>
+          <Col className="text-left brand">
+            Pilot
+          </Col>
+        </Row>
 
-          <Nav className="w-100 nav-fill">
-            <Nav.Link href="/home">
-              <span className="current">Home</span>
-            </Nav.Link>
-            <Nav.Link href="#" className={'about' === this.props.active ? active : className}>
-              <span>Monitoring</span>
-            </Nav.Link>
-            <Nav.Link href="#" className={'dataset' === this.props.active ? active : className}>
-              <span>Data</span>
-            </Nav.Link>
-            <Nav.Link href="#" className={'help' === this.props.active ? active : className}>
-              <span>Security</span>
-            </Nav.Link>
-          </Nav>
+        <Row>
+          <Col className="text-left nav-item active">
+            <IconContext.Provider value={{ className: "nav-icon" }}>
+              <FaHome />
+            </IconContext.Provider>
+            <span class="pl-2">Home</span>
+          </Col>
+        </Row>
 
-        </Navbar>
-      </div>
+        <Row>
+          <Col className="text-left nav-item">
+            <IconContext.Provider value={{ className: "nav-icon" }}>
+              <FaServer />
+            </IconContext.Provider>
+            <span class="pl-2">Monitoring</span>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col className="text-left nav-item">
+            <IconContext.Provider value={{ className: "nav-icon" }}>
+              <FaDatabase />
+            </IconContext.Provider>
+            <span class="pl-2">Data</span>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col className="text-left nav-item">
+            <IconContext.Provider value={{ className: "nav-icon" }}>
+              <FaShieldAlt />
+            </IconContext.Provider>
+            <span class="pl-2">Security</span>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

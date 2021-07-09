@@ -1,7 +1,9 @@
 @import '~scss/colors';
+@import '~scss/globals';
 
 body {
   color: $text-main;
   font-family: 'Noto Sans JP', sans-serif;
   // font-family: 'Work Sans', sans-serif;
+  background: #333;
 }

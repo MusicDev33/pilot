@@ -1,30 +1,45 @@
 @import '~scss/colors';
+@import '~scss/globals';
 
-.nav-wrapper {
-  background: transparent;
-  width: 700px;
+.p-navbar {
+  height: 100vh;
+  border-right: 1px solid #656565;
 }
 
-.nav-link span {
+.brand {
+  font-weight: $fw-heavy;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 160%;
+  margin-bottom: 20px;
+  color: white;
+}
 
-  color: $palette-2-light!important;
-  font-weight: 600;
-  transition: 0.3s;
-  border-bottom: 3px solid transparent;
-
+.nav-item {
   font-family: 'Work Sans', sans-serif;
-  font-size: 120%;
+  font-weight: $fw-heavy;
+  font-size: 130%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  margin-left: 9px;
 
-  &.current {
-    color: $palette-2!important;
+  border-radius: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 12px 15px;
+  color: white;
+
+  &:hover:not(.active) {
+    background: $palette-2-light-2;
+    color: $text-main;
   }
 
-  &:hover {
-    color: $palette-2-dark!important;
-    border-color: $palette-2-dark;
+  &.active {
+    background: $palette-2;
+    color: white;
   }
-}
 
-.navbar-brand {
-  color: $text-main!important;
+  .nav-icon {
+    vertical-align: middle;
+  }
 }
