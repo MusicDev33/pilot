@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Home from './pages/Home/Home';
 import PNavbar from 'components/PNavbar/PNavbar';
+import AttentionItemsBar from 'components/AttentionItemsBar/AttentionItemsBar';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -51,6 +52,10 @@ export default class PContainer extends Component {
 
                 </Route>
               </Switch>
+            </Col>
+
+            <Col sm={3}>
+              <AttentionItemsBar />
             </Col>
           </Row>
         </Container>

@@ -1,0 +1,19 @@
+@import '~scss/colors';
+@import '~scss/globals';
+
+.notif-icon {
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+
+  font-size: 160%;
+
+  &:hover {
+    color: $palette-2;
+  }
+}
+
+.att-bar {
+  border-left: 1px solid #656565;
+  height: 100vh;
+}
