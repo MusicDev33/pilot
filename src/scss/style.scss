@@ -2,8 +2,19 @@
 @import '~scss/globals';
 
 body {
-  color: $text-main;
+  color: #fefefe;
   font-family: 'Noto Sans JP', sans-serif;
   // font-family: 'Work Sans', sans-serif;
   background: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fefefe;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: $fw-heavy;
 }
