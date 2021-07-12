@@ -7,6 +7,8 @@ import Col from 'react-bootstrap/Col';
 import { IconContext } from 'react-icons';
 import { FaUserAlt } from 'react-icons/fa';
 
+import DataUsageChart from 'components/DataUsageChart/DataUsageChart';
+
 import './Home.scss';
 
 import { Chart, registerables } from 'chart.js';
@@ -16,6 +18,7 @@ Chart.defaults.color='white';
 
 export default class Home extends Component {
   chartRef = React.createRef();
+  chartRefs = [];
 
   constructor() {
     super();
@@ -31,51 +34,6 @@ export default class Home extends Component {
       .then(response => {
         this.setState({usageData: response.data.payload}, () => {
           console.log(this.state.usageData);
-
-          const thisChartRef = this.chartRef.current.getContext('2d');
-
-          new Chart(thisChartRef, {
-            type: 'doughnut',
-            data: {
-              labels: [this.state.usageData[0].name, 'unused'],
-              datasets: [{
-                data: [this.state.usageData[0].usage, 100 - this.state.usageData[0].usage],
-                backgroundColor: [
-                  '#e5989b',
-                  'rgb(120, 120, 120)'
-                ]
-              }]
-            },
-            options: {
-              legend: {
-                labels: {
-                  fontColor: 'white'
-                }
-              }
-            }
-          });
-
-          /*
-          for (let usage of this.state.usageData) {
-            let ref = React.createRef();
-            let currentRef = ref.current.getContext('2d');
-
-            new Chart(currentRef, {
-              type: 'doughnut',
-              data: {
-                labels: [usage.name, 'unused'],
-                datasets: [{
-                  data: [usage.usage, 100 - usage.usage]
-                }]
-              }
-            });
-
-            const addedRef = this.state.chartRefs;
-            addedRef.push(ref);
-
-            this.setState({chartRefs: addedRef});
-          }
-          */
         });
       })
       .catch(e => {
@@ -84,6 +42,7 @@ export default class Home extends Component {
   }
 
   render() {
+
     return (
       <Container fluid className="pt-3">
         <Row>
@@ -103,9 +62,12 @@ export default class Home extends Component {
         </Row>
 
         <Row className="mt-3">
-          <Col sm={3}>
-            <canvas id="chart" ref={this.chartRef}></canvas>
-          </Col>
+          {this.state.usageData.map(usage => (
+            <Col sm={3} className="pb-4">
+              <h5 className="text-center">{usage.name}</h5>
+              <DataUsageChart usageData={usage} />
+            </Col>
+          ))}
         </Row>
       </Container>
     )
