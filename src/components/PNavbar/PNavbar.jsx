@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import { IconContext } from 'react-icons';
-import { FaHome, FaServer, FaDatabase, FaShieldAlt } from 'react-icons/fa';
+import { FaHome, FaServer, FaDatabase, FaShieldAlt, FaFileAlt } from 'react-icons/fa';
 
 import './PNavbar.scss';
 
@@ -77,6 +77,15 @@ export default class PNavbar extends Component {
               <FaShieldAlt />
             </IconContext.Provider>
             <span class="pl-2">Security</span>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col className="text-left nav-item">
+            <IconContext.Provider value={{ className: "nav-icon" }}>
+              <FaFileAlt />
+            </IconContext.Provider>
+            <span class="pl-2">Documentation</span>
           </Col>
         </Row>
       </Container>
