@@ -5,7 +5,6 @@ body {
   color: #fefefe;
   font-family: 'Noto Sans JP', sans-serif;
   // font-family: 'Work Sans', sans-serif;
-  background: #333;
 }
 
 h1,
@@ -17,4 +16,10 @@ h6 {
   color: #fefefe;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: $fw-heavy;
+}
+
+.card-view {
+  background: #3c3c3c;
+  border-radius: 30px;
+  padding: 7px 10px;
 }

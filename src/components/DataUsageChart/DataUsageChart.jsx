@@ -21,13 +21,17 @@ export default class DataUsageChart extends Component {
     new Chart(thisChartRef, {
       type: 'doughnut',
       data: {
-        labels: [this.props.usageData.name, 'unused'],
         datasets: [{
           data: [this.props.usageData.usage, 100 - this.props.usageData.usage],
           backgroundColor: [
             '#e5989b',
-            'rgb(120, 120, 120)'
-          ]
+            '#676767'
+          ],
+          borderColor: [
+            '#915e60',
+            '#757575'
+          ],
+          borderWidth: [2, 0]
         }]
       },
       options: {

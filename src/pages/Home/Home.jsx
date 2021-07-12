@@ -61,7 +61,7 @@ export default class Home extends Component {
           </Col>
         </Row>
 
-        <Row className="mt-3">
+        <Row className="mt-3 card-view">
           {this.state.usageData.map(usage => (
             <Col sm={3} className="pb-4">
               <h5 className="text-center">{usage.name}</h5>
