@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Chart, registerables } from 'chart.js';
+import './DataUsageChart.scss';
+
 Chart.register(...registerables);
 
 Chart.defaults.color='white';
+Chart.defaults.plugins.legend.display=false;
 
 export default class DataUsageChart extends Component {
   chartRef = React.createRef();
@@ -36,9 +39,7 @@ export default class DataUsageChart extends Component {
       },
       options: {
         legend: {
-          labels: {
-            fontColor: 'white'
-          }
+          display: false
         }
       }
     });
@@ -46,7 +47,10 @@ export default class DataUsageChart extends Component {
 
   render() {
     return (
-      <canvas id="chart" ref={this.chartRef}></canvas>
+      <div>
+        <div className="text-center mb-2 usage-text">{this.props.usageData.usageMax}</div>
+        <canvas id="chart" ref={this.chartRef}></canvas>
+      </div>
     )
   }
 }

@@ -24,17 +24,8 @@ export default class PContainer extends Component {
     super(props);
 
     this.state = {
-      tissueResults: [],
       baseUrlLen: env.BASE_URL.split('/').length
     }
-
-    this.getTissueData = this.getTissueData.bind(this);
-    console.log(`Env: ${env.BASE_URL}`);
-  }
-
-  getTissueData(data) {
-    console.log(data);
-    window.history.replaceState(null, 'Test', '/tissue');
   }
 
   render() {

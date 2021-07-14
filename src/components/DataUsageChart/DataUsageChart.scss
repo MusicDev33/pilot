@@ -1,0 +1,9 @@
+@import '~scss/colors';
+@import '~scss/globals';
+
+.usage-text {
+  color: white;
+  font-weight: $fw-v-heavy;
+  font-size: 110%;
+  font-family: 'Work Sans', sans-serif;
+}
