@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Home from './pages/Home/Home';
+import Monitoring from './pages/Monitoring/Monitoring';
 import PNavbar from 'components/PNavbar/PNavbar';
 import AttentionItemsBar from 'components/AttentionItemsBar/AttentionItemsBar';
 
@@ -37,10 +38,13 @@ export default class PContainer extends Component {
               <PNavbar />
             </Col>
             <Col>
-              <Home />
               <Switch>
                 <Route path={`${env.BASE_URL}/home`}>
+                  <Home />
+                </Route>
 
+                <Route path={`${env.BASE_URL}/monitoring`}>
+                  <Monitoring />
                 </Route>
               </Switch>
             </Col>

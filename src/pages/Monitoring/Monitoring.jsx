@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './Monitoring.scss';
 
-export class Monitoring extends Component {
-  constructor() {
+export default class Monitoring extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
 
     }
@@ -10,7 +11,7 @@ export class Monitoring extends Component {
 
   render() {
     return (
-      <div>Test</div>
+      <div><h4>Testing</h4></div>
     )
   }
 }

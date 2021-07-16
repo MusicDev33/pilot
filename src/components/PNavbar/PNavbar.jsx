@@ -21,13 +21,12 @@ export default class PNavbar extends Component {
     super(props);
 
     this.state = {
-      active: this.props.active
+      active: this.props.active,
+      urlBase: window.location.pathname
     };
   }
 
   activeLink(link) {
-    console.log(link)
-    console.log(this.props.active)
     if (link === this.props.active) {
       return true;
     }
@@ -35,9 +34,21 @@ export default class PNavbar extends Component {
     return false;
   }
 
+  changeUrlBase(urlBase) {
+    this.setState({urlBase: urlBase});
+  }
+
+  activeCheck(base) {
+    if (this.state.urlBase.includes(base)) {
+      return 'active';
+    }
+
+    return '';
+  }
+
   render() {
     let className = 'mx-1';
-    let active = 'mx-1 current';
+    let active = 'current';
 
     return (
       <Container fluid className="px-4 p-navbar">
@@ -49,8 +60,8 @@ export default class PNavbar extends Component {
 
         <Row>
           <Col className="text-left px-0">
-            <Link className="text-dec-0">
-              <div className="nav-item active">
+            <Link className="text-dec-0" to="/home" onClick={() => {this.changeUrlBase('home')}}>
+              <div className={`nav-item ${this.activeCheck('home')}`}>
                 <IconContext.Provider value={{ className: "nav-icon" }}>
                   <FaHome />
                 </IconContext.Provider>
@@ -62,8 +73,8 @@ export default class PNavbar extends Component {
 
         <Row>
           <Col className="text-left px-0">
-            <Link className="text-dec-0" to="/monitoring">
-              <div className="nav-item">
+            <Link className="text-dec-0" to="/monitoring" onClick={() => {this.changeUrlBase('monitoring')}}>
+              <div className={`nav-item ${this.activeCheck('monitoring')}`}>
                 <IconContext.Provider value={{ className: "nav-icon" }}>
                   <FaServer />
                 </IconContext.Provider>
@@ -75,8 +86,8 @@ export default class PNavbar extends Component {
 
         <Row>
           <Col className="text-left px-0">
-            <Link className="text-dec-0" to="/data">
-              <div className="nav-item">
+            <Link className="text-dec-0" to="/data" onClick={() => {this.changeUrlBase('data')}}>
+              <div className={`nav-item ${this.activeCheck('data')}`}>
                 <IconContext.Provider value={{ className: "nav-icon" }}>
                   <FaDatabase />
                 </IconContext.Provider>
@@ -88,8 +99,8 @@ export default class PNavbar extends Component {
 
         <Row>
           <Col className="text-left px-0">
-            <Link className="text-dec-0" to="/security">
-              <div className="nav-item">
+            <Link className="text-dec-0" to="/security" onClick={() => {this.changeUrlBase('security')}}>
+              <div className={`nav-item ${this.activeCheck('security')}`}>
                 <IconContext.Provider value={{ className: "nav-icon" }}>
                   <FaShieldAlt />
                 </IconContext.Provider>
@@ -101,8 +112,8 @@ export default class PNavbar extends Component {
 
         <Row>
           <Col className="text-left px-0">
-            <Link className="text-dec-0" to="/docs">
-              <div className="nav-item">
+            <Link className="text-dec-0" to="/docs" onClick={() => {this.changeUrlBase('docs')}}>
+              <div className={`nav-item ${this.activeCheck('docs')}`}>
                 <IconContext.Provider value={{ className: "nav-icon" }}>
                   <FaFileAlt />
                 </IconContext.Provider>

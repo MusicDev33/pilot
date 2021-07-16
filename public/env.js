@@ -76,5 +76,5 @@ window.env = {
   "EDITOR": "vi",
   "SASS_PATH": "src",
   "PORT": "3600",
-  "BASE_URL": "/"
+  "BASE_URL": ""
 };
