@@ -11,6 +11,8 @@ import DataUsageChart from 'components/DataUsageChart/DataUsageChart';
 
 import './Home.scss';
 
+import { token } from 'token';
+
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
@@ -30,7 +32,7 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://bioinfocore.usu.edu/api/quotas/all')
+    axios.get('http://bioinfocore.usu.edu/api/quotas/all', {headers: {'kbl-token': token}})
       .then(response => {
         this.setState({usageData: response.data.payload}, () => {
           console.log(this.state.usageData);

@@ -104,7 +104,7 @@ export default class PNavbar extends Component {
                 <IconContext.Provider value={{ className: "nav-icon" }}>
                   <FaShieldAlt />
                 </IconContext.Provider>
-                <span class="pl-2">Data</span>
+                <span class="pl-2">Security</span>
               </div>
             </Link>
           </Col>
