@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Home from './pages/Home/Home';
 import Monitoring from './pages/Monitoring/Monitoring';
+import Docs from './pages/Docs/Docs';
 import PNavbar from 'components/PNavbar/PNavbar';
 import AttentionItemsBar from 'components/AttentionItemsBar/AttentionItemsBar';
 
@@ -11,10 +12,7 @@ import Col from 'react-bootstrap/Col';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  useLocation,
-  withRouter
+  Route
 } from 'react-router-dom';
 
 import env from 'react-dotenv';
@@ -45,6 +43,10 @@ export default class PContainer extends Component {
 
                 <Route path={`${env.BASE_URL}/monitoring`}>
                   <Monitoring />
+                </Route>
+
+                <Route path={`${env.BASE_URL}/docs`}>
+                  <Docs />
                 </Route>
               </Switch>
             </Col>

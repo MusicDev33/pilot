@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,9 +8,9 @@ import { FaUserAlt } from 'react-icons/fa';
 
 import DataUsageChart from 'components/DataUsageChart/DataUsageChart';
 
-import './Home.scss';
+import { getDataUsage } from 'services/data/data';
 
-import { token } from 'token';
+import './Home.scss';
 
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
@@ -32,7 +31,7 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://bioinfocore.usu.edu/api/quotas/all', {headers: {'kbl-token': token}})
+    getDataUsage()
       .then(response => {
         this.setState({usageData: response.data.payload}, () => {
           console.log(this.state.usageData);
@@ -63,7 +62,7 @@ export default class Home extends Component {
           </Col>
         </Row>
 
-        <Row className="mt-3 card-view">
+        <Row className="mt-3 p-card">
           {this.state.usageData.map(usage => (
             <Col sm={3} className="pb-4">
               <h5 className="text-center">{usage.name}</h5>
