@@ -16,13 +16,6 @@ const classDict = {
   'Offline': 'offline'
 }
 
-const services = [
-  {id: 'rstudio', name: 'RStudio', status: 'Loading...'},
-  {id: 'ganglia', name: 'Ganglia', status: 'Loading...'},
-  {id: 'rkfe', name: 'Raikou Frontend', status: 'Loading...'},
-  {id: 'raikou', name: 'Raikou', status: 'Loading...'}
-]
-
 export default class Monitoring extends Component {
   constructor(props) {
     super(props);
