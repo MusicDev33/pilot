@@ -155,7 +155,12 @@ export default class Monitoring extends Component {
                   <button className="p-btn-1 disabled w-100">Start</button>
                 </Col>
                 <Col sm={6}>
-                  <button className="p-btn-1 w-100">Update</button>
+                  <button className="p-btn-1 w-100" onClick={() => {
+                    WebManage.updateSite('bioinfocore')
+                      .then(res => {
+                        console.log(res.data);
+                      })
+                  }}>Update</button>
                 </Col>
               </Row>
             </div>
@@ -172,7 +177,12 @@ export default class Monitoring extends Component {
                   <button className="p-btn-1 disabled w-100">Start</button>
                 </Col>
                 <Col sm={6}>
-                  <button className="p-btn-1 w-100">Update</button>
+                  <button className="p-btn-1 w-100" onClick={() => {
+                    WebManage.updateSite('biocluster')
+                      .then(res => {
+                        console.log(res.data);
+                      })
+                  }}>Update</button>
                 </Col>
               </Row>
             </div>
