@@ -20,3 +20,16 @@ export const getBioinfoCss = () => {
 export const getBiocoreCss = () => {
   return axios.get('http://bioinfocore.usu.edu/public/css/style.css');
 }
+
+// Various services
+const serviceDict = {
+  rstudio: 'http://bioinfo.usu.edu/rstudio',
+  ganglia: 'http://biocluster.usu.edu/ganglia/',
+  rkfe: 'http://bioinfocore.usu.edu/rkfe/',
+  raikou: 'http://bioinfocore.usu.edu/raikou/image/magenta.png',
+  test: 'http://bioinfo.usu.edu/test'
+}
+
+export const getServiceUp = (serviceName) => {
+  return axios.get(serviceDict[serviceName]);
+}

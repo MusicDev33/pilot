@@ -56,7 +56,7 @@ window.env = {
   "npm_lifecycle_script": "react-dotenv && react-scripts start",
   "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
   "SHELL": "/bin/bash",
-  "TERMINATOR_UUID": "urn:uuid:1b8cd3a7-0634-4048-819d-d2493249c503",
+  "TERMINATOR_UUID": "urn:uuid:62539869-b412-4318-99c1-6d00f798a542",
   "npm_package_version": "0.1.0",
   "npm_lifecycle_event": "start",
   "QT_ACCESSIBILITY": "1",

@@ -1,0 +1,51 @@
+@import '~scss/colors';
+@import '~scss/globals';
+
+.action-bar {
+  padding: 10px 12px;
+  border-bottom: solid 3px $palette-2;
+}
+
+.action-icon {
+  font-size: 200%;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: $palette-2;
+  }
+}
+
+.site-status {
+  color: white;
+  font-family: $font-1;
+  font-weight: $fw-medium;
+  font-size: 108%;
+
+  .online {
+    color: $palette-2-light;
+    font-weight: $fw-heavy;
+  }
+
+  .offline {
+    color: #dd5151;
+    font-weight: $fw-heavy;
+  }
+
+  .loading {
+    color: #969696;
+  }
+}
+
+.service-data {
+  color: white;
+  background: #35363b;
+  border-radius: 20px;
+
+  .title {
+    font-family: $font-2;
+    font-size: 120%;
+    font-weight: $fw-v-heavy;
+  }
+}
