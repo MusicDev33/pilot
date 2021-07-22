@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { FaRedo } from 'react-icons/fa';
-import { IconContext } from 'react-icons';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button'
 
 import * as Uptime from 'services/uptime/uptime';
+import * as WebManage from 'services/manage/manage';
 
 import './Monitoring.scss';
 
@@ -135,7 +133,12 @@ export default class Monitoring extends Component {
                   <button className="p-btn-1 disabled w-100">Start</button>
                 </Col>
                 <Col sm={6}>
-                  <button className="p-btn-1 w-100">Update</button>
+                  <button className="p-btn-1 w-100" onClick={() => {
+                    WebManage.updateSite('bioinformatics')
+                      .then(res => {
+                        console.log(res.data);
+                      })
+                  }}>Update</button>
                 </Col>
               </Row>
             </div>
