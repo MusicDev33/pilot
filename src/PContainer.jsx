@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import Monitoring from './pages/Monitoring/Monitoring';
 import Docs from './pages/Docs/Docs';
 import Data from './pages/Data/Data';
+import Security from './pages/Security/Security';
 
 import PNavbar from 'components/PNavbar/PNavbar';
 import AttentionItemsBar from 'components/AttentionItemsBar/AttentionItemsBar';
@@ -50,6 +51,10 @@ export default class PContainer extends Component {
 
                 <Route path={`${env.BASE_URL}/data`}>
                   <Data />
+                </Route>
+
+                <Route path={`${env.BASE_URL}/security`}>
+                  <Security />
                 </Route>
 
                 <Route path={`${env.BASE_URL}/docs`}>

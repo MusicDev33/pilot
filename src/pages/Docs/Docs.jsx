@@ -56,6 +56,14 @@ export default class NewComp extends Component {
 
   render() { 
 
-    return (<div></div>);
+    return (
+      <Container fluid className="pt-3">
+        <Row className="mt-3">
+          <Col>
+            <h1>Documentation</h1>
+          </Col>
+        </Row>
+      </Container>
+    );
   }
 }

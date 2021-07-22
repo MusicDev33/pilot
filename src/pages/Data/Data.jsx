@@ -46,19 +46,9 @@ export default class Data extends Component {
 
     return (
       <Container fluid className="pt-3">
-        <Row>
-          <Col className="pl-4">
-            <h5 className="login-text">
-              <IconContext.Provider value={{ className: "user-icon" }}>
-                <FaUserAlt />
-              </IconContext.Provider> smccowan
-            </h5>
-          </Col>
-        </Row>
-
         <Row className="mt-3">
           <Col>
-            <h1>Home</h1>
+            <h1>Data</h1>
           </Col>
         </Row>
 
