@@ -6,40 +6,21 @@ import Col from 'react-bootstrap/Col';
 import { IconContext } from 'react-icons';
 import { FaUserAlt } from 'react-icons/fa';
 
-import DataUsageChart from 'components/DataUsageChart/DataUsageChart';
-
-import { getDataUsage } from 'services/data/data';
-
 import './Home.scss';
 
-import { Chart, registerables } from 'chart.js';
-Chart.register(...registerables);
-
-Chart.defaults.color='white';
-
 export default class Home extends Component {
-  chartRef = React.createRef();
-  chartRefs = [];
+  
 
   constructor() {
     super();
 
     this.state = {
-      usageData: [],
-      chartRefs: []
+      
     }
   }
 
   componentDidMount() {
-    getDataUsage()
-      .then(response => {
-        this.setState({usageData: response.data.payload}, () => {
-          console.log(this.state.usageData);
-        });
-      })
-      .catch(e => {
-        console.log(e.response);
-      })
+    
   }
 
   render() {
@@ -60,15 +41,6 @@ export default class Home extends Component {
           <Col>
             <h1>Home</h1>
           </Col>
-        </Row>
-
-        <Row className="mt-3 p-card">
-          {this.state.usageData.map(usage => (
-            <Col sm={3} className="pb-4">
-              <h5 className="text-center">{usage.name}</h5>
-              <DataUsageChart usageData={usage} />
-            </Col>
-          ))}
         </Row>
       </Container>
     )

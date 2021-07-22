@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
+
 import Home from './pages/Home/Home';
 import Monitoring from './pages/Monitoring/Monitoring';
 import Docs from './pages/Docs/Docs';
+import Data from './pages/Data/Data';
+
 import PNavbar from 'components/PNavbar/PNavbar';
 import AttentionItemsBar from 'components/AttentionItemsBar/AttentionItemsBar';
 
@@ -43,6 +46,10 @@ export default class PContainer extends Component {
 
                 <Route path={`${env.BASE_URL}/monitoring`}>
                   <Monitoring />
+                </Route>
+
+                <Route path={`${env.BASE_URL}/data`}>
+                  <Data />
                 </Route>
 
                 <Route path={`${env.BASE_URL}/docs`}>
