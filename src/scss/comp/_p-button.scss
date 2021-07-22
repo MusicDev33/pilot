@@ -1,0 +1,22 @@
+.p-btn-1 {
+  border-radius: 999px;
+  background: $palette-1;
+  border: none;
+  padding: 5px 20px;
+  font-family: $font-2;
+  font-weight: $fw-heavy;
+  color: $text-main;
+  transition: 0.3s;
+  font-size: 110%;
+
+  &:hover {
+    background: $palette-1-dark;
+    color: $text-dark;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    background: #6d6d6d;
+    color: #cacaca;
+  }
+}

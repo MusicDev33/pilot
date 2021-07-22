@@ -5,6 +5,7 @@ import { IconContext } from 'react-icons';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button'
 
 import * as Uptime from 'services/uptime/uptime';
 
@@ -129,11 +130,14 @@ export default class Monitoring extends Component {
               <div className="site-status">
                 Status: <span className={classDict[this.state.bioinfoStatus]}>{this.state.bioinfoStatus}</span>
               </div>
-              <div class="mt-3 action-bar">
-                <IconContext.Provider value={{ className: "action-icon" }}>
-                  <FaRedo />
-                </IconContext.Provider>
-              </div>
+              <Row className="mt-3">
+                <Col sm={6}>
+                  <button className="p-btn-1 disabled w-100">Start</button>
+                </Col>
+                <Col sm={6}>
+                  <button className="p-btn-1 w-100">Update</button>
+                </Col>
+              </Row>
             </div>
           </Col>
 
@@ -143,11 +147,14 @@ export default class Monitoring extends Component {
               <div className="site-status">
                 Status: <span className={classDict[this.state.biocoreStatus]}>{this.state.biocoreStatus}</span>
               </div>
-              <div class="mt-3 action-bar">
-                <IconContext.Provider value={{ className: "action-icon" }}>
-                  <FaRedo />
-                </IconContext.Provider>
-              </div>
+              <Row className="mt-3">
+                <Col sm={6}>
+                  <button className="p-btn-1 disabled w-100">Start</button>
+                </Col>
+                <Col sm={6}>
+                  <button className="p-btn-1 w-100">Update</button>
+                </Col>
+              </Row>
             </div>
           </Col>
 
@@ -157,11 +164,14 @@ export default class Monitoring extends Component {
               <div className="site-status">
                 Status: <span className={classDict[this.state.bioclusterStatus]}>{this.state.bioclusterStatus}</span>
               </div>
-              <div class="mt-3 action-bar">
-                <IconContext.Provider value={{ className: "action-icon" }}>
-                  <FaRedo />
-                </IconContext.Provider>
-              </div>
+              <Row className="mt-3">
+                <Col sm={6}>
+                  <button className="p-btn-1 disabled w-100">Start</button>
+                </Col>
+                <Col sm={6}>
+                  <button className="p-btn-1 w-100">Update</button>
+                </Col>
+              </Row>
             </div>
           </Col>
         </Row>
