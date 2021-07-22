@@ -25,7 +25,10 @@ export default class Monitoring extends Component {
       rstudio: {id: 'rstudio', name: 'RStudio', status: 'Loading...'},
       ganglia: {id: 'ganglia', name: 'Ganglia', status: 'Loading...'},
       rkfe: {id: 'rkfe', name: 'Raikou Frontend', status: 'Loading...'},
-      raikou: {id: 'raikou', name: 'Raikou', status: 'Loading...'}
+      raikou: {id: 'raikou', name: 'Raikou', status: 'Loading...'},
+      bioinfoLoading: false,
+      biocoreLoading: false,
+      bioclusterLoading: false
     }
   }
 
@@ -107,6 +110,21 @@ export default class Monitoring extends Component {
   render() {
     const services = [this.state.rstudio, this.state.ganglia, this.state.rkfe, this.state.raikou];
 
+    let binfoUpdateButton = (
+      <button className="p-btn-1 w-100" onClick={() => {
+        this.setState({bioinfoLoading: true});
+        WebManage.updateSite('bioinformatics')
+          .then(res => {
+            console.log(res.data);
+            this.setState({bioinfoLoading: false});
+          })
+      }}>Update</button>
+    );
+
+    if (this.state.bioinfoLoading) {
+      binfoUpdateButton = <div class="loader"></div>;
+    }
+
     return (
       <Container fluid className="pt-3">
         <Row className="mt-3">
@@ -133,12 +151,7 @@ export default class Monitoring extends Component {
                   <button className="p-btn-1 disabled w-100">Start</button>
                 </Col>
                 <Col sm={6}>
-                  <button className="p-btn-1 w-100" onClick={() => {
-                    WebManage.updateSite('bioinformatics')
-                      .then(res => {
-                        console.log(res.data);
-                      })
-                  }}>Update</button>
+                  {binfoUpdateButton}
                 </Col>
               </Row>
             </div>
