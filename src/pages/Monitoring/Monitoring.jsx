@@ -118,11 +118,50 @@ export default class Monitoring extends Component {
             console.log(res.data);
             this.setState({bioinfoLoading: false});
           })
+          .catch(e => {
+            this.setState({bioinfoLoading: false});
+          })
+      }}>Update</button>
+    );
+
+    let biocoreUpdateButton = (
+      <button className="p-btn-1 w-100" onClick={() => {
+        this.setState({biocoreLoading: true});
+        WebManage.updateSite('bioinfocore')
+          .then(res => {
+            console.log(res.data);
+            this.setState({biocoreLoading: false});
+          })
+          .catch(e => {
+            this.setState({biocoreLoading: false});
+          })
+      }}>Update</button>
+    );
+
+    let bioclusterUpdateButton = (
+      <button className="p-btn-1 w-100" onClick={() => {
+        this.setState({bioclusterLoading: true});
+        WebManage.updateSite('biocluster')
+          .then(res => {
+            console.log(res.data);
+            this.setState({bioclusterLoading: false});
+          })
+          .catch(e => {
+            this.setState({bioclusterLoading: false});
+          })
       }}>Update</button>
     );
 
     if (this.state.bioinfoLoading) {
       binfoUpdateButton = <div class="loader"></div>;
+    }
+
+    if (this.state.biocoreLoading) {
+      biocoreUpdateButton = <div class="loader"></div>;
+    }
+
+    if (this.state.bioclusterLoading) {
+      biocoreUpdateButton = <div class="loader"></div>;
     }
 
     return (
@@ -168,12 +207,7 @@ export default class Monitoring extends Component {
                   <button className="p-btn-1 disabled w-100">Start</button>
                 </Col>
                 <Col sm={6}>
-                  <button className="p-btn-1 w-100" onClick={() => {
-                    WebManage.updateSite('bioinfocore')
-                      .then(res => {
-                        console.log(res.data);
-                      })
-                  }}>Update</button>
+                  {biocoreUpdateButton}
                 </Col>
               </Row>
             </div>
@@ -190,12 +224,7 @@ export default class Monitoring extends Component {
                   <button className="p-btn-1 disabled w-100">Start</button>
                 </Col>
                 <Col sm={6}>
-                  <button className="p-btn-1 w-100" onClick={() => {
-                    WebManage.updateSite('biocluster')
-                      .then(res => {
-                        console.log(res.data);
-                      })
-                  }}>Update</button>
+                  {bioclusterUpdateButton}
                 </Col>
               </Row>
             </div>
