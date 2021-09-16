@@ -28,7 +28,15 @@ export default class Monitoring extends Component {
       raikou: {id: 'raikou', name: 'Raikou', status: 'Loading...'},
       bioinfoLoading: false,
       biocoreLoading: false,
-      bioclusterLoading: false
+      bioclusterLoading: false,
+      nodeStatuses: [
+        {"node":"chela01","status":"Loading"},
+        {"node":"chela02","status":"Loading"},
+        {"node":"chela03","status":"Loading"},
+        {"node":"chela04","status":"Loading"},
+        {"node":"chela05","status":"Loading"},
+        {"node":"chela-g01","status":"Loading"}
+      ]
     }
   }
 
@@ -57,6 +65,21 @@ export default class Monitoring extends Component {
       .catch(e => {
         this.setState({bioclusterStatus: 'Offline'});
       });
+
+    Uptime.getNodeStatuses()
+      .then(response => {
+        this.setState({nodeStatuses: response.data.payload});
+      })
+      .catch(e => {
+        this.setState({nodeStatuses: [
+          {"node":"chela01","status":"Offline"},
+          {"node":"chela02","status":"Offline"},
+          {"node":"chela03","status":"Offline"},
+          {"node":"chela04","status":"Offline"},
+          {"node":"chela05","status":"Offline"},
+          {"node":"chela-g01","status":"Offline"}
+        ]});
+      })
 
     const rstudio = JSON.parse(JSON.stringify(this.state.rstudio));
     Uptime.getServiceUp('rstudio')
@@ -243,6 +266,23 @@ export default class Monitoring extends Component {
               <div className="service-data p-3">
                 <div className="title">{service.name}</div>
                 <div className="site-status">Status: <span className={classDict[service.status]}>{service.status}</span></div>
+              </div>
+            </Col>
+          ))}
+        </Row>
+
+        <Row className="mt-4">
+          <Col>
+            <h3>Nodes</h3>
+          </Col>
+        </Row>
+
+        <Row className="mt-2">
+          {this.state.nodeStatuses.map(node => (
+            <Col sm={3} className="mb-3">
+              <div className="service-data p-3">
+                <div className="title">{node.node}</div>
+                <div className="site-status">Status: <span className={classDict[node.status]}>{node.status}</span></div>
               </div>
             </Col>
           ))}

@@ -21,6 +21,10 @@ export const getBiocoreCss = () => {
   return axios.get('http://bioinfocore.usu.edu/public/css/style.css');
 }
 
+export const getNodeStatuses = () => {
+  return axios.get('http://bioinfocore.usu.edu/api/uptime/nodes');
+}
+
 // Various services
 const serviceDict = {
   rstudio: 'http://bioinfo.usu.edu/rstudio',
