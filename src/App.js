@@ -1,7 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import 'scss/style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import wsClient from 'services/websocket';
 
 import PContainer from './PContainer';
 
