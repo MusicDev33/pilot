@@ -3,7 +3,8 @@ import { token } from 'token';
 
 const config = {
   headers: {
-    'kbl-token': token
+    'kbl-token': token,
+    'Access-Control-Allow-Origin': 'http://localhost:3050'
   }
 }
 
