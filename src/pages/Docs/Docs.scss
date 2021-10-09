@@ -37,3 +37,26 @@
     color: #969696;
   }
 }
+
+.doc-item {
+  border-radius: 12px;
+  border: 2px solid $palette-1;
+  color: white;
+  padding: 12px 9px;
+  font-size: 115%;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: $font-1;
+  font-weight: $fw-heavy;
+  text-align: center;
+
+  &:hover {
+    background: $palette-1;
+    color: $text-main;
+  }
+}
+
+.doc-text {
+  color: white;
+  font-size: 102%;
+}
