@@ -54,6 +54,11 @@
     background: $palette-1;
     color: $text-main;
   }
+
+  &.active {
+    background: $palette-1;
+    color: $text-main;
+  }
 }
 
 .doc-text {

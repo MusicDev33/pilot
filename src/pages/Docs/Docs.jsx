@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ReactMarkdown from 'react-markdown';
 
 import * as DocFiles from './export';
 
@@ -17,7 +16,7 @@ export default class NewComp extends Component {
       bioinfoStatus: 'Loading...',
       biocoreStatus: 'Loading...',
       bioclusterStatus: 'Loading...',
-      doc: 'kbldb'
+      doc: 'boxidizer'
     }
 
   }
@@ -42,24 +41,26 @@ export default class NewComp extends Component {
 
             <Row>
               <Col sm={3}>
-                <div className="doc-item" onClick={() => {
+                <div className={"doc-item " + (this.state.doc === 'kbldb' ? 'active' : '')} onClick={() => {
                   this.setState({doc: 'kbldb'})
                 }}>
                   KBLDB
                 </div>
               </Col>
               <Col sm={3}>
-                <div className="doc-item">
+                <div className={"doc-item " + (this.state.doc === 'boxidizer' ? 'active' : '')} onClick={() => {
+                  this.setState({doc: 'boxidizer'})
+                }}>
                   Boxidizer
                 </div>
               </Col>
               <Col sm={3}>
-                <div className="doc-item">
+                <div className={"doc-item " + (this.state.doc === 'toxel' ? 'active' : '')}>
                   Toxel
                 </div>
               </Col>
               <Col sm={3}>
-                <div className="doc-item">
+                <div className={"doc-item " + (this.state.doc === 'raikou' ? 'active' : '')}>
                   Raikou
                 </div>
               </Col>
