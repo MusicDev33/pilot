@@ -36,10 +36,10 @@ export default class PContainer extends Component {
       <Router>
         <Container fluid className="App px-0">
           <Row>
-            <Col sm={2}>
+            <Col sm={2} className="pe-0">
               <PNavbar />
             </Col>
-            <Col>
+            <Col className="content-container">
               <Switch>
                 <Route path={`${env.BASE_URL}/home`}>
                   <Home />
@@ -63,7 +63,7 @@ export default class PContainer extends Component {
               </Switch>
             </Col>
 
-            <Col sm={3}>
+            <Col sm={3} className="ps-0">
               <AttentionItemsBar />
             </Col>
           </Row>

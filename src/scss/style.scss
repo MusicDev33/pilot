@@ -29,3 +29,27 @@ code {
 a {
   color: $palette-2!important;
 }
+
+.content-container {
+  max-height: 100vh;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #494949;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $palette-2;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $palette-2-dark;
+  }
+}

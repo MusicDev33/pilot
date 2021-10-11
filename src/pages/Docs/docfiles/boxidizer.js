@@ -50,6 +50,28 @@ const boxidizer = () => {
         <li>Go ahead and build the image with <code>docker build . -t dock_user/codename</code> </li>
         <li>Run the image in a container with <code>docker run -p 3000:port</code>, where the port is the port from the portmap (3020 for biocluster, etc.)</li>
       </ul>
+
+      <p>
+        Don't worry about cleaning up after Docker, there's a cron script that automatically does every day at 4 AM.
+      </p>
+
+      <h4>Commands</h4>
+
+      <p>
+        Now that you're aware of the under-the-hood aspects of bxz, you'll want to know the commands that allow you to start and update our websites 
+        in a much safer way.
+      </p>
+
+      <ul>
+        <li><code>bxz start codename</code> - Starts the website if it's not already running</li>
+        <li><code>bxz update codename</code> - Updates the website if it's already running</li>
+      </ul>
+
+      <p>
+        I've explained what the <code>start</code> command does above, but <code>update</code> command is a little more complex. The update command basically
+        runs a <code>git pull</code>, an <code>npm i</code>, then it builds a container. If it successfully builds the container, it will stop the previous
+        one, start the new one, and if that's successful, it will remove the old one. Again, Boxidizer handles all of this, you just need to type in one command.
+      </p>
     </div>
   )
 }
