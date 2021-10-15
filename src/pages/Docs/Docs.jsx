@@ -16,7 +16,7 @@ export default class NewComp extends Component {
       bioinfoStatus: 'Loading...',
       biocoreStatus: 'Loading...',
       bioclusterStatus: 'Loading...',
-      doc: 'boxidizer'
+      doc: 'raikou'
     }
 
   }
@@ -60,7 +60,9 @@ export default class NewComp extends Component {
                 </div>
               </Col>
               <Col sm={3}>
-                <div className={"doc-item " + (this.state.doc === 'raikou' ? 'active' : '')}>
+                <div className={"doc-item " + (this.state.doc === 'raikou' ? 'active' : '')} onClick={() => {
+                  this.setState({doc: 'raikou'})
+                }}>
                   Raikou
                 </div>
               </Col>
