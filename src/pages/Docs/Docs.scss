@@ -69,3 +69,18 @@
 .doc-text h4 {
   margin-top: 40px;
 }
+
+.doc-category {
+  border-bottom: 3px solid transparent;
+  display: inline-block;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &.selected {
+    border-color: $palette-1;
+  }
+
+  &:hover:not(.selected) {
+    border-color: $palette-1-light;
+  }
+}

@@ -31,14 +31,18 @@ export default class NewComp extends Component {
           </Col>
         </Row>
 
-        <Row className="p-card mt-4 py-3 mb-5">
+        <Row className="mt-4 px-4">
           <Col>
             <Row className="mb-3">
               <Col>
-                <h4>Services</h4>
+                <h3 className="doc-category selected">Services</h3>
               </Col>
             </Row>
+          </Col>
+        </Row>
 
+        <Row className="p-card py-3 mb-5">
+          <Col>
             <Row>
               <Col sm={3}>
                 <div className={"doc-item " + (this.state.doc === 'kbldb' ? 'active' : '')} onClick={() => {
