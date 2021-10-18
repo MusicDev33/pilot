@@ -33,29 +33,29 @@ export default class NewComp extends Component {
         </Row>
 
         <Row className="mt-4 px-4">
-          <Col>
+          <Col className="text-center">
             <Row className="mb-3">
               <Col>
-                <h3 className={"doc-category " + (this.state.category === 'services' ? 'selected' : '')} 
-                  onClick={() => {this.setState({category: 'services'})}}>Services</h3>
+                <h4 className={"doc-category " + (this.state.category === 'services' ? 'selected' : '')} 
+                  onClick={() => {this.setState({category: 'services'})}}>Services</h4>
               </Col>
             </Row>
           </Col>
 
-          <Col>
+          <Col className="text-center">
             <Row className="mb-3">
               <Col>
-                <h3 className={"doc-category " + (this.state.category === 'software' ? 'selected' : '')} 
-                  onClick={() => {this.setState({category: 'software'})}}>Software</h3>
+                <h4 className={"doc-category " + (this.state.category === 'software' ? 'selected' : '')} 
+                  onClick={() => {this.setState({category: 'software'})}}>Software</h4>
               </Col>
             </Row>
           </Col>
 
-          <Col>
+          <Col className="text-center">
             <Row className="mb-3">
               <Col>
-                <h3 className={"doc-category " + (this.state.category === 'troubleshoot' ? 'selected' : '')} 
-                  onClick={() => {this.setState({category: 'troubleshoot'})}}>Troubleshoot</h3>
+                <h4 className={"doc-category " + (this.state.category === 'troubleshoot' ? 'selected' : '')} 
+                  onClick={() => {this.setState({category: 'troubleshoot'})}}>Troubleshoot</h4>
               </Col>
             </Row>
           </Col>
