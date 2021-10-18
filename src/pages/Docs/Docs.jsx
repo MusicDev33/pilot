@@ -16,7 +16,8 @@ export default class NewComp extends Component {
       bioinfoStatus: 'Loading...',
       biocoreStatus: 'Loading...',
       bioclusterStatus: 'Loading...',
-      doc: 'raikou'
+      doc: 'raikou',
+      category: 'services'
     }
 
   }
@@ -35,7 +36,26 @@ export default class NewComp extends Component {
           <Col>
             <Row className="mb-3">
               <Col>
-                <h3 className="doc-category selected">Services</h3>
+                <h3 className={"doc-category " + (this.state.category === 'services' ? 'selected' : '')} 
+                  onClick={() => {this.setState({category: 'services'})}}>Services</h3>
+              </Col>
+            </Row>
+          </Col>
+
+          <Col>
+            <Row className="mb-3">
+              <Col>
+                <h3 className={"doc-category " + (this.state.category === 'software' ? 'selected' : '')} 
+                  onClick={() => {this.setState({category: 'software'})}}>Software</h3>
+              </Col>
+            </Row>
+          </Col>
+
+          <Col>
+            <Row className="mb-3">
+              <Col>
+                <h3 className={"doc-category " + (this.state.category === 'troubleshoot' ? 'selected' : '')} 
+                  onClick={() => {this.setState({category: 'troubleshoot'})}}>Troubleshoot</h3>
               </Col>
             </Row>
           </Col>
