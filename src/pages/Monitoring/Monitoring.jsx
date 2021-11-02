@@ -189,11 +189,6 @@ export default class Monitoring extends Component {
 
     return (
       <Container fluid className="pt-3">
-        <Row className="mt-3">
-          <Col>
-            <h1>Monitoring</h1>
-          </Col>
-        </Row>
 
         <Row className="mt-3">
           <Col>

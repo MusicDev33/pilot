@@ -36,12 +36,6 @@ export default class Home extends Component {
             </h5>
           </Col>
         </Row>
-
-        <Row className="mt-3">
-          <Col>
-            <h1>Home</h1>
-          </Col>
-        </Row>
       </Container>
     )
   }

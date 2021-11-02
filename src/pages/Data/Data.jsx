@@ -46,7 +46,7 @@ export default class Data extends Component {
       <Container fluid className="pt-3">
         <Row className="mt-3">
           <Col>
-            <h1>Data</h1>
+            <h3>BeeGFS Usage</h3>
           </Col>
         </Row>
 

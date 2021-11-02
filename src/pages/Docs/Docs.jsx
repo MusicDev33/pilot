@@ -26,13 +26,8 @@ export default class NewComp extends Component {
 
     return (
       <Container fluid className="pt-3">
-        <Row className="mt-3">
-          <Col>
-            <h1>Documentation</h1>
-          </Col>
-        </Row>
 
-        <Row className="mt-4 px-4">
+        <Row className="mt-3 px-4">
           <Col className="text-center">
             <Row className="mb-3">
               <Col>
