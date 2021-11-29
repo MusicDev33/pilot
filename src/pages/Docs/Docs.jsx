@@ -16,8 +16,8 @@ export default class NewComp extends Component {
       bioinfoStatus: 'Loading...',
       biocoreStatus: 'Loading...',
       bioclusterStatus: 'Loading...',
-      doc: 'intro',
-      category: 'services'
+      doc: 'nodes',
+      category: 'processes'
     }
 
   }
@@ -41,7 +41,7 @@ export default class NewComp extends Component {
             <Row className="mb-3">
               <Col>
                 <h4 className={"doc-category " + (this.state.category === 'processes' ? 'selected' : '')} 
-                  onClick={() => {this.setState({category: 'processes'})}}>Processes</h4>
+                  onClick={() => {this.setState({category: 'processes'})}}>Admin</h4>
               </Col>
             </Row>
           </Col>
@@ -92,26 +92,35 @@ export default class NewComp extends Component {
         <Row className={"p-card py-3 mb-5 " + (this.state.category === "processes" ? '' : 'd-none')}>
           <Col>
             <Row>
-              <Col sm={3}>
+              <Col>
                 <div className={"doc-item " + (this.state.doc === 'backups' ? 'active' : '')} onClick={() => {
                   this.setState({doc: 'backups'})
                 }}>
                   Backups
                 </div>
               </Col>
-              <Col sm={3}>
-                <div className={"doc-item " + (this.state.doc === 'boxidizer' ? 'active' : '')} onClick={() => {
-                  this.setState({doc: 'boxidizer'})
+              <Col>
+                <div className={"doc-item " + (this.state.doc === 'nodes' ? 'active' : '')} onClick={() => {
+                  this.setState({doc: 'nodes'})
                 }}>
-                  Boxidizer
+                  Nodes
                 </div>
               </Col>
-              <Col sm={3}>
-                <div className={"doc-item " + (this.state.doc === 'toxel' ? 'active' : '')}>
-                  Toxel
+              <Col>
+                <div className={"doc-item " + (this.state.doc === 'modules' ? 'active' : '')} onClick={() => {
+                  this.setState({doc: 'modules'})
+                }}>
+                  Modules
                 </div>
               </Col>
-              <Col sm={3}>
+              <Col>
+                <div className={"doc-item " + (this.state.doc === 'raikou' ? 'active' : '')} onClick={() => {
+                  this.setState({doc: 'raikou'})
+                }}>
+                  Raikou
+                </div>
+              </Col>
+              <Col>
                 <div className={"doc-item " + (this.state.doc === 'raikou' ? 'active' : '')} onClick={() => {
                   this.setState({doc: 'raikou'})
                 }}>
