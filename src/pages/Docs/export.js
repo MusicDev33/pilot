@@ -5,3 +5,5 @@ export * from './docfiles/raikou';
 export * from './docfiles/backups';
 export * from './docfiles/nodes';
 export * from './docfiles/modules';
+export * from './docfiles/databases';
+export * from './docfiles/vms';

@@ -114,17 +114,17 @@ export default class NewComp extends Component {
                 </div>
               </Col>
               <Col>
-                <div className={"doc-item " + (this.state.doc === 'raikou' ? 'active' : '')} onClick={() => {
-                  this.setState({doc: 'raikou'})
+                <div className={"doc-item " + (this.state.doc === 'databases' ? 'active' : '')} onClick={() => {
+                  this.setState({doc: 'databases'})
                 }}>
-                  Raikou
+                  Databases
                 </div>
               </Col>
               <Col>
-                <div className={"doc-item " + (this.state.doc === 'raikou' ? 'active' : '')} onClick={() => {
-                  this.setState({doc: 'raikou'})
+                <div className={"doc-item " + (this.state.doc === 'vms' ? 'active' : '')} onClick={() => {
+                  this.setState({doc: 'vms'})
                 }}>
-                  Raikou
+                  VMs
                 </div>
               </Col>
             </Row>

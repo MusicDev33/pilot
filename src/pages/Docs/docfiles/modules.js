@@ -18,9 +18,10 @@ const modules = () => {
       <h4>Modulefiles</h4>
 
       <p>
-        Module files are written in Tcl. It's not really important that you know Tcl itself, but rather how modules are composed. In the <code>/opt/modulefiles</code>
-        folder, there's a file called <code>template</code>. To make a new module, copy that file and replace the fields with the information for the new
-        module. Make the new module has its own folder. 
+        Module files are written in Tcl. It's not really important that you know Tcl itself, but rather how modules are composed. In 
+        the <code>/opt/modulefiles</code> folder, there's a file called <code>template</code>. To make a new module, copy that file and 
+        replace the fields with the information for the new module. Make sure the new module has its own folder, which contains 
+        subfolders for the different versions. You can check other folders to see how this is set up.
       </p>
     </div>
   );
