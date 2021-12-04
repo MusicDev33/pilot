@@ -14,13 +14,15 @@ const backups = () => {
         There are two places where we store backups: NAS1 and NAS2. NAS1 holds long term backups, and NAS2 holds weekly backups. They're stored in different formats
         too. NAS1 holds backups in <code>.tar.gz</code> format, while NAS2 just holds straight copies of the data. If someone's missing data, you can go find it in
         NAS2 and just copy straight into their directory. No unzipping required. These copies are created via Rsync, with massive custom commands in order to reduce
-        the useless data being copied. For future reference, we try to minimize how many <code>.folders</code> we back up. This is because these folders often contain
+        the useless data being copied. For future reference, we try to minimize how many <code>.</code> folders we back up. This is because these folders often contain
         a ton of useless data, like various caches and configs. Rsync backups happen every Sunday at 1 AM. 
       </p>
 
       <h2 className="mb-4">Archives</h2>
       <p>
-        Archives are stored on NAS1. These are monthly backups, and are currently not completely automated. These archives take a while to create, so 
+        Archives are stored on NAS1. These are monthly backups, and are currently not completely automated. These archives take a while to create, so it's a good
+        idea to detach the processes and output the results into a text file. These are stored in the format <code>yyyy-mm-dd.username.tar.gz</code>.
+        These are all in the <code>weekly</code> folder in NAS1.
       </p>
     </div>
   );

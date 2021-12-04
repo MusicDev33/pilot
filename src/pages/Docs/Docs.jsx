@@ -16,7 +16,7 @@ export default class NewComp extends Component {
       bioinfoStatus: 'Loading...',
       biocoreStatus: 'Loading...',
       bioclusterStatus: 'Loading...',
-      doc: 'modules',
+      doc: 'backups',
       category: 'processes'
     }
 
