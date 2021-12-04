@@ -52,20 +52,20 @@ export default class PNavbar extends Component {
 
     return (
       <Container fluid className="px-4 p-navbar">
-        <Row>
+        <Row className="d-xl-block d-none">
           <Col className="text-left brand">
             Pilot
           </Col>
         </Row>
 
-        <Row>
+        <Row className="pt-4 pt-xl-0">
           <Col className="text-left px-0">
             <Link className="text-dec-0" to="/home" onClick={() => {this.changeUrlBase('home')}}>
               <div className={`nav-item ${this.activeCheck('home')}`}>
-                <IconContext.Provider value={{ className: "nav-icon" }}>
+                <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaHome />
                 </IconContext.Provider>
-                <span class="ps-2">Home</span>
+                <span class="ps-xl-2">Home</span>
               </div>
             </Link>
           </Col>
@@ -75,10 +75,10 @@ export default class PNavbar extends Component {
           <Col className="text-left px-0">
             <Link className="text-dec-0" to="/monitoring" onClick={() => {this.changeUrlBase('monitoring')}}>
               <div className={`nav-item ${this.activeCheck('monitoring')}`}>
-                <IconContext.Provider value={{ className: "nav-icon" }}>
+                <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaServer />
                 </IconContext.Provider>
-                <span class="ps-2">Monitoring</span>
+                <span class="ps-xl-2">Monitoring</span>
               </div>
             </Link>
           </Col>
@@ -88,10 +88,10 @@ export default class PNavbar extends Component {
           <Col className="text-left px-0">
             <Link className="text-dec-0" to="/data" onClick={() => {this.changeUrlBase('data')}}>
               <div className={`nav-item ${this.activeCheck('data')}`}>
-                <IconContext.Provider value={{ className: "nav-icon" }}>
+                <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaDatabase />
                 </IconContext.Provider>
-                <span class="ps-2">Data</span>
+                <span class="ps-xl-2">Data</span>
               </div>
             </Link>
           </Col>
@@ -101,10 +101,10 @@ export default class PNavbar extends Component {
           <Col className="text-left px-0">
             <Link className="text-dec-0" to="/security" onClick={() => {this.changeUrlBase('security')}}>
               <div className={`nav-item ${this.activeCheck('security')}`}>
-                <IconContext.Provider value={{ className: "nav-icon" }}>
+                <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaShieldAlt />
                 </IconContext.Provider>
-                <span class="ps-2">Security</span>
+                <span class="ps-xl-2">Security</span>
               </div>
             </Link>
           </Col>
@@ -114,10 +114,10 @@ export default class PNavbar extends Component {
           <Col className="text-left px-0">
             <Link className="text-dec-0" to="/docs" onClick={() => {this.changeUrlBase('docs')}}>
               <div className={`nav-item ${this.activeCheck('docs')}`}>
-                <IconContext.Provider value={{ className: "nav-icon" }}>
+                <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaFileAlt />
                 </IconContext.Provider>
-                <span class="ps-2">Documentation</span>
+                <span class="ps-xl-2">Docs</span>
               </div>
             </Link>
           </Col>
