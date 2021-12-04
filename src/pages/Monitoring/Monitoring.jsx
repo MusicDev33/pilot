@@ -197,51 +197,51 @@ export default class Monitoring extends Component {
         </Row>
 
         <Row className="mt-3">
-          <Col>
+          <Col xl sm={6} className="mb-3">
             <div className="p-card px-4 py-3">
               <h4>Bioinfo</h4>
               <div className="site-status">
                 Status: <span className={classDict[this.state.bioinfoStatus]}>{this.state.bioinfoStatus}</span>
               </div>
               <Row className="mt-3">
-                <Col sm={6}>
+                <Col sm={6} className="px-1 px-xl-3">
                   <button className="p-btn-1 disabled w-100">Start</button>
                 </Col>
-                <Col sm={6}>
+                <Col sm={6} className="px-1 px-xl-3">
                   {binfoUpdateButton}
                 </Col>
               </Row>
             </div>
           </Col>
 
-          <Col>
+          <Col xl sm={6} className="mb-3">
             <div className="p-card px-4 py-3">
               <h4>Biocore</h4>
               <div className="site-status">
                 Status: <span className={classDict[this.state.biocoreStatus]}>{this.state.biocoreStatus}</span>
               </div>
               <Row className="mt-3">
-                <Col sm={6}>
+                <Col sm={6} className="px-1 px-xl-3">
                   <button className="p-btn-1 disabled w-100">Start</button>
                 </Col>
-                <Col sm={6}>
+                <Col sm={6} className="px-1 px-xl-3">
                   {biocoreUpdateButton}
                 </Col>
               </Row>
             </div>
           </Col>
 
-          <Col>
+          <Col xl sm={6} className="mb-3">
             <div className="p-card px-4 py-3">
               <h4>Biocluster</h4>
               <div className="site-status">
                 Status: <span className={classDict[this.state.bioclusterStatus]}>{this.state.bioclusterStatus}</span>
               </div>
               <Row className="mt-3">
-                <Col sm={6}>
+                <Col sm={6} className="px-1 px-xl-3">
                   <button className="p-btn-1 disabled w-100">Start</button>
                 </Col>
-                <Col sm={6}>
+                <Col sm={6} className="px-1 px-xl-3">
                   {bioclusterUpdateButton}
                 </Col>
               </Row>
@@ -249,7 +249,7 @@ export default class Monitoring extends Component {
           </Col>
         </Row>
 
-        <Row className="mt-4">
+        <Row className="mt-2">
           <Col>
             <h3>Web Vitals</h3>
           </Col>
@@ -257,7 +257,7 @@ export default class Monitoring extends Component {
 
         <Row className="mt-2">
           {services.map(service => (
-            <Col sm={3}>
+            <Col sm={6} xl={3} className="mb-3">
               <div className="service-data p-3">
                 <div className="title">{service.name}</div>
                 <div className="site-status">Status: <span className={classDict[service.status]}>{service.status}</span></div>
@@ -266,7 +266,7 @@ export default class Monitoring extends Component {
           ))}
         </Row>
 
-        <Row className="mt-4">
+        <Row className="mt-2">
           <Col>
             <h3>Nodes</h3>
           </Col>
@@ -274,7 +274,7 @@ export default class Monitoring extends Component {
 
         <Row className="mt-2">
           {this.state.nodeStatuses.map(node => (
-            <Col sm={3} className="mb-3">
+            <Col sm={4} xl={3} className="mb-3">
               <div className="service-data p-3">
                 <div className="title">{node.node}</div>
                 <div className="site-status">Status: <span className={classDict[node.status]}>{node.status}</span></div>
