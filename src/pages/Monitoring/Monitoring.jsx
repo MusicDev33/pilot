@@ -176,15 +176,15 @@ export default class Monitoring extends Component {
     );
 
     if (this.state.bioinfoLoading) {
-      binfoUpdateButton = <div class="loader"></div>;
+      binfoUpdateButton = <div className="loader"></div>;
     }
 
     if (this.state.biocoreLoading) {
-      biocoreUpdateButton = <div class="loader"></div>;
+      biocoreUpdateButton = <div className="loader"></div>;
     }
 
     if (this.state.bioclusterLoading) {
-      biocoreUpdateButton = <div class="loader"></div>;
+      biocoreUpdateButton = <div className="loader"></div>;
     }
 
     return (

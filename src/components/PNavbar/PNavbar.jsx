@@ -65,7 +65,7 @@ export default class PNavbar extends Component {
                 <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaHome />
                 </IconContext.Provider>
-                <span class="ps-xl-2">Home</span>
+                <span className="ps-xl-2">Home</span>
               </div>
             </Link>
           </Col>
@@ -78,7 +78,7 @@ export default class PNavbar extends Component {
                 <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaServer />
                 </IconContext.Provider>
-                <span class="ps-xl-2">Monitoring</span>
+                <span className="ps-xl-2">Monitoring</span>
               </div>
             </Link>
           </Col>
@@ -91,7 +91,7 @@ export default class PNavbar extends Component {
                 <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaDatabase />
                 </IconContext.Provider>
-                <span class="ps-xl-2">Data</span>
+                <span className="ps-xl-2">Data</span>
               </div>
             </Link>
           </Col>
@@ -104,7 +104,7 @@ export default class PNavbar extends Component {
                 <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaShieldAlt />
                 </IconContext.Provider>
-                <span class="ps-xl-2">Security</span>
+                <span className="ps-xl-2">Security</span>
               </div>
             </Link>
           </Col>
@@ -117,7 +117,7 @@ export default class PNavbar extends Component {
                 <IconContext.Provider value={{ className: "nav-icon d-xl-block d-none" }}>
                   <FaFileAlt />
                 </IconContext.Provider>
-                <span class="ps-xl-2">Docs</span>
+                <span className="ps-xl-2">Docs</span>
               </div>
             </Link>
           </Col>
