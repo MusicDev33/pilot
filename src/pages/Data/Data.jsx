@@ -52,7 +52,7 @@ export default class Data extends Component {
 
         <Row className="mt-3 p-card">
           {this.state.usageData.map(usage => (
-            <Col sm={3} className="pb-4">
+            <Col sm={6} lg={4} xl={3} className="pb-4">
               <h5 className="text-center">{usage.name}</h5>
               <DataUsageChart usageData={usage} />
             </Col>
