@@ -59,26 +59,21 @@ export default class NewComp extends Component {
         <Row className={"p-card py-3 mb-5 " + (this.state.category === "services" ? '' : 'd-none')}>
           <Col>
             <Row>
-              <Col sm={3}>
+              <Col>
                 <div className={"doc-item " + (this.state.doc === 'kbldb' ? 'active' : '')} onClick={() => {
                   this.setState({doc: 'kbldb'})
                 }}>
                   KBLDB
                 </div>
               </Col>
-              <Col sm={3}>
+              <Col>
                 <div className={"doc-item " + (this.state.doc === 'boxidizer' ? 'active' : '')} onClick={() => {
                   this.setState({doc: 'boxidizer'})
                 }}>
                   Boxidizer
                 </div>
               </Col>
-              <Col sm={3}>
-                <div className={"doc-item " + (this.state.doc === 'toxel' ? 'active' : '')}>
-                  Toxel
-                </div>
-              </Col>
-              <Col sm={3}>
+              <Col>
                 <div className={"doc-item " + (this.state.doc === 'raikou' ? 'active' : '')} onClick={() => {
                   this.setState({doc: 'raikou'})
                 }}>
